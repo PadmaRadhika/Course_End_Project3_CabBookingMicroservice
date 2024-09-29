@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Book A Cab</title>
+	<link rel="stylesheet" href="/css/styles.css" />
+	<script src="/js/navbar.js"></script>
+	<!-- Load Google Maps JavaScript API -->
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCp32J33HjWL711Qzwt5ox3NpxdSFkC01o&libraries=places">
+	</script>
+	<script src="/js/book-cab.js"></script>	
+</head>
+
+<body onload="initMap()">
+	<div id="navbar"> </div>
+	<div class="container">
+		<form th:action="@{/addCabBooking}" th:object="${cabBooking}" method="post">
+			<div id="formContent">
+				<table>
+
+					<tr>
+						<td><label for="fromLocation">From Location:</label></td>
+						<td><input type="text" th:field="*{fromLocation}" id="fromLocation" /></td>
+						<!--<td th:if="${#fields.hasErrors('fromLocation')}" th:errors="*{fromLocation}">From Location Error</td>-->
+					</tr>
+					<tr>
+						<td><label for="toLocation">To Location:</label></td>
+						<td><input type="text" th:field="*{toLocation}" id="toLocation" /></td>
+						<!--<td th:if="${#fields.hasErrors('toLocation')}" th:errors="*{toLocation}">To Location Error</td>-->
+					</tr>
+					<tr>
+						<td> <label for="cabType">Cab Type:</label></td>
+						<td>
+							<input type="radio" th:field="*{cabType}" id="cabType" name="cabType" value="economy"
+								onclick="callEndpoint()"> Economy
+							<input type="radio" th:field="*{cabType}" id="cabType" name="cabType" value="premium"
+								onclick="callEndpoint()"> Premium
+							<input type="radio" th:field="*{cabType}" id="cabType" name="cabType" value="luxury"
+								onclick="callEndpoint()"> Luxury
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="hidden" th:field="*{fare}" name="fare" id="fare">
+						</td>
+					</tr>
+					
+
+					
+			</div>
+			</table>
+			<input type="submit" value="Book a Cab">
+			<br>
+			<div id="responseMessage"></div><br>
+			<div id="output"></div>
+		</form>
+	</div>
+	<!-- Display the Google Map -->
+	<div id="map"> </div>
+
+	<!-- Display distance and duration results -->
+
+
+</body>
+
+</html>

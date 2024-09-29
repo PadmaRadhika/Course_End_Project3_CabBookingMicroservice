@@ -1,0 +1,119 @@
+@charset "ISO-8859-1";
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    width: 15%;
+    position: fixed;
+  	height: 100%; 	
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /*li {
+    float:left;
+    
+    
+  }*/
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+  #formContent {
+	background-color:rgb(255, 255, 255);	
+	font-family: Arial, Helvetica, sans-serif;	  
+    justify-content:center;
+    align-items:start;
+  }
+  /* Set the size of the map */
+        #map {
+			margin-left:10%;
+            height: 630px;
+            width: 60%;
+        }
+.container {
+            display: flex;
+            justify-content: space-between;            
+            border: 3px solid rgb(0, 0, 0);
+            align-items:start;
+            margin-left:16%;
+        }
+.resultsDisplay {
+            justify-content:center;           
+            border: 3px solid rgb(0, 0, 0);
+            align-items:start;
+            margin-left:16%;
+            width: 50%;
+            font-family: Arial, Helvetica, sans-serif;
+        } 
+#economy {
+			justify-content: left;
+            height: 100px;
+            width: 100%;            
+            align-items:start;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size:large;
+        } 
+#premium {
+			
+            height: 100px;
+            width: 100%;            
+            align-items:start;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size:large;
+        }  
+#luxury {
+			
+            height: 100px;
+            width: 100%;            
+            align-items:start;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size:large;
+        }
+#distanceandduration {
+			font-size:large;
+            height: 100px;
+            width: 100%;            
+            align-items:start;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+input[type=text] {
+    width: 100%;
+    padding: 7px 7px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit],[type=button] {
+    width: 60%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 7px 7px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size:large;
+  }  
+  input[type=submit],[type=button]:hover {
+    background-color: rgb(0, 0, 0);
+  }      
+  form{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+  }

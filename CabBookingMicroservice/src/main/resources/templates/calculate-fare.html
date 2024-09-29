@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculate Fare</title>
+	<link rel="stylesheet" href="/css/styles.css" />
+		<script src="/js/navbar.js"></script>
+    <!-- Load Google Maps JavaScript API -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCp32J33HjWL711Qzwt5ox3NpxdSFkC01o&libraries=places">
+    </script>
+	<script src="/js/book-cab.js"></script>   
+
+ </head>
+<body onload="initMap()">
+<div id="navbar"> </div>
+<div class="container">
+<form th:action="@{/}"  method="post">
+	<div id="formContent"> 
+	<table>	
+		
+		     <td><label for="fromLocation">From Location:</label></td>
+		     <td><input type="text"  id="fromLocation"  name="fromLocation"/></td>
+		     <!--<td th:if="${#fields.hasErrors('fromLocation')}" th:errors="*{fromLocation}">From Location Error</td>-->
+		</tr>
+		<tr>
+			<td><label for="toLocation">To Location:</label></td>
+			<td><input type="text" id="toLocation" name="toLocation"/></td>
+			<!--<td th:if="${#fields.hasErrors('toLocation')}" th:errors="*{toLocation}">To Location Error</td>-->
+		</tr>	
+	</div>
+	</table>
+	<input type="button" value="Calculate Fare" onclick="callCalculateFareEndpoint();">
+	<br>
+	<div id="economy"></div><br>
+	<div id="premium"></div><br>
+	<div id="luxury">	</div><br>
+	<div id="distanceandduration"></div>
+</form>
+</div>
+
+<!-- Display the Google Map -->
+<div id="map">	</div>
+
+<!-- Display distance and duration results -->
+
+
+</body>
+</html>

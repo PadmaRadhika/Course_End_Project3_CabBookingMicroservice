@@ -1,0 +1,13 @@
+package com.example.CabBookingMicroservice;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class CabBookingMicroserviceApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}

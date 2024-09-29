@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Result</title>
+	<link rel="stylesheet" href="/css/styles.css" />
+		<script src="/js/navbar.js"></script>
+</head>
+<body>
+	<div id="navbar"> </div>
+	<div class="resultsDisplay">
+    <h2>Success! Cab Booked Successfully</h2>
+	<p><strong>From Location:</strong> <span th:text="${bookingDetails.fromLocation}"></span></p>
+	    <p><strong>To Location:</strong> <span th:text="${bookingDetails.toLocation}"></span></p>
+	    <p><strong>Cab Type:</strong> <span th:text="${bookingDetails.cabType}"></span></p>
+		<p><strong>Cab Fare: </strong> $<span  th:text="${bookingDetails.fare}"></span></p>
+	   </div> 
+    
+
+</body>
+</html>
